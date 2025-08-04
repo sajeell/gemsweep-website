@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GemSweep – Bulk Delete Gemini Chats
 
-## Getting Started
+GemSweep is a Chrome extension designed to enhance your experience with Gemini conversations. It adds checkboxes to the Gemini conversation list, allowing you to delete multiple chats at once with ease.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Adds checkboxes to Gemini conversation list.
+- Bulk delete multiple chats in one go.
+- Simple and intuitive interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. [Clone this repository](https://github.com/sajeell/gemsweep) or download the ZIP file.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable "Developer mode" using the toggle in the top-right corner.
+4. Click "Load unpacked" and select the folder containing this project.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Usage
 
-## Learn More
+1. Navigate to [Gemini](https://gemini.google.com/).
+2. Use the checkboxes added by GemSweep to select conversations.
+3. Click the delete button to remove selected chats.
 
-To learn more about Next.js, take a look at the following resources:
+## Files
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `manifest.json`: Configuration file for the Chrome extension.
+- `background.js`: Handles background tasks and service worker logic.
+- `content.js`: Injects functionality into the Gemini conversation list.
+- `popup.html`: HTML for the extension's popup interface.
+- `popup.js`: JavaScript for the popup interface.
+- `icons/`: Contains icons used by the extension.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Permissions
 
-## Deploy on Vercel
+GemSweep requires the following permissions:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `scripting`: To inject scripts into the Gemini conversation list.
+- `activeTab`: To interact with the currently active tab.
+- `storage`: To store user preferences.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Host Permissions
+
+GemSweep works exclusively on the following domains:
+
+- `https://gemini.google.com/*`
+- `https://gemini.google.com/app/*`
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to improve GemSweep.
+
+## Support
+
+If you encounter any issues or have questions, please open an issue in this repository.
