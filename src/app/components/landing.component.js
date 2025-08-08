@@ -59,7 +59,7 @@ export default function LandingComponent() {
         <div className={styles.ctaGroup}>
           <Link
             className={styles.ctaPrimary}
-            href='https://github.com/sajeell/gemsweep'
+            href='https://chromewebstore.google.com/detail/gemsweep-–-bulk-delete-ge/emoifgdcfhdbcnpalaemhehkfdegghoj'
             target='_blank'
             rel='noopener noreferrer'
           >
